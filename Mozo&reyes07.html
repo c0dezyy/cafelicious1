@@ -1,0 +1,348 @@
+<DOCTYPE html>
+<html>
+<head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>Menu</title>
+     <link rel="icon" type="text/css" href="Icons/logo.png">
+     <link rel="stylesheet" type="text/css" href="file:///C:/Users/sealg/Desktop/mozo/Mozo&reyes.html">
+     <!-- css file -->
+     <link rel="stylesheet" type="text/css" href="file:///C:/Users/sealg/Desktop/mozo/mozo&reyes07.css">
+     <link rel="stylesheet" type="text/css" href="file:///C:/Users/sealg/Desktop/mozo/AboutUs.html">
+     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+ </head>
+
+ <body>
+ 	<!-- header start -->
+ 	<header class= "header">
+ 		<!-- logo -->
+ 		<a href="1-index.html" class="logo">
+ 			<img src="Logo.png">
+ 		</a>
+
+ 		<!-- nav bar start -->
+ 		<nav class="navbar">
+ 		<input type="checkbox" name="check">
+ 		<label for="check" class="check-btn">
+ 			<i class="fas fa-bars"> </i>
+ 		</label>
+ 		<ul>
+ 			<li><a href="Mozo&reyes.html">Home</a></li>
+ 			<li><a href="Mozo&reyes07.html" >Menu</a></li>
+ 			<li><a href="AboutUs.html">About us</a></li>
+
+ 		</ul>
+ 		<!-- <div id="menu-btn" class="fas fa-bars"></div> -->
+ 		</nav>
+ 		<!-- nav bar end -->
+
+
+ 		<!-- hyperlink with icons  (search, cart, profile, menu button) -->
+ 		<div class="icons"> 
+ 		<div class="cart-container" onmouseover="showCartForm()" onmouseout="hideCartform()">
+ 		<a href="4-cart.html">
+ 		<div class="fas fa-shopping-cart" id="cartbutton"></div>
+ 	</a>
+ 	<div class="cart-form" id="cartform">
+ 		<form>
+ 		<div id="cartItems"></div>
+ 		<div id="total-price"> Total price ₱<span id="totalprice">0.00</span></div>
+ 	</form>
+ </div>
+</div>
+<!-- hyperlink with icons(search, cart, profile, menu button) -->
+</header>
+<!-- header end -->
+
+<!-- Menu Section -->
+<section class="menu" id="menu">
+	<h1 class="heading">OUR<span>Menu</span></h1>
+	<p class="heading-description"> Taste the goodie of cafelicious store!</p>
+
+
+	<div class="category-text"><h3>Pastries</h3></div>
+
+	<div class="menu">
+		<div class="container menu-section">
+			<!-- product 1 -->
+			<div class="menu-box">
+				<div class="menu-img">
+					<img src="croissant.png" height="180px" width="20" alt="croissant">
+				</div>
+				<div class="menu-content">
+					<h3>croissant</h3>
+					<p>  Indulge in the flaky, buttery bliss of a croissant, where each delicate layer unfurls like a golden sunrise, inviting you to savor its warm, melt-in-your-mouth goodness with every bite.</p>
+					<div onclick="addtocart('croissant(mini)','₱80.00','croissant.png'.'item1-s'); return false;">
+						<button id="item1-s">Mini<span>₱80.00</span></button> 
+					</div>
+					<div onclick="addtocart('croissant (big)','₱120.00','croissant.png','item1-m'); return false;">
+						<button id="item1-m">big<span>₱120.00</span></button>
+					</div>
+				</div>
+			</div>
+
+            <!-- product 2 -->
+            <div class="menu-box">
+            	<div class="menu-img">
+            		<img src="cinnamon_roll.png" height="180px" width="20" alt="cinnamon roll">
+            	</div>
+            	<div class="menu-content">
+            		<h3>cinnamon_roll</h3>
+            		<p>   Experience the heavenly aroma of freshly baked cinnamon rolls, where soft, pillowy dough swirls with rich, spiced sweetness, all drizzled in creamy icing that transforms each bite into a warm hug of comfort and indulgence.</p>
+            		<div onclick="addtocart('cinnamon roll(mini)','₱70.00','cinnamon_roll.png'.'item1-s'); return false;">
+						<button id="item2-s">mini<span>₱70.00</span></button>
+					</div>
+
+					<div onclick="addtocart('cinnamon roll (Big)','₱110.00','cinnamon_roll.png','item1-m'); return false;">
+						<button id="item2-m">Big<span>₱110.00</span></button>
+					</div>
+				</div>
+			</div>
+
+			<!-- product 3 -->
+			<div class="menu-box">
+				<div class="menu-img">
+					<img src="Cream puff.png" height="180px" width="20" alt="Cream puff">
+				</div>
+				<div class="menu-content">
+            		<h3>Cream puff</h3>
+            		<p>  Delight in the airy elegance of a cream puff, where a delicate, golden shell encases a luscious cloud of velvety cream, creating a blissful explosion of flavor that dances on your palate with every indulgent bite.</p>
+            		<div onclick="addtocart('Cream puff(mini)','₱50.00','Cream puff.png'.'item1-s'); return false;">
+						<button id="item3-s">mini<span>₱50.00</span></button>
+					</div>
+
+					<div onclick="addtocart('Cream puff (Big)','₱120.00','Cream puff.png','item1-m'); return false;">
+						<button id="item3-m">Big<span>₱120.00</span></button>
+					</div>
+				</div>
+			</div>
+
+           <!-- product 4 -->
+           <div class="menu-box" >
+           	<div class="menu-img">
+           		<img src="strawberry cheesecake.png" height="180px" width="20" alt="strawberry cheesecake">
+           	</div>
+           	<div class="menu-content">
+           		<h3>strawberry cheesecake</h3>
+           		<p>Savor the velvety richness of cheesecake, where a silky, creamy filling rests atop a buttery graham cracker crust, each slice offering a perfect balance of sweetness and tang that melts in your mouth and leaves you craving just one more bite.</p>
+           		<div onclick="addtocart('strawberry cheesecake(mini)','₱150.00','strawberry cheesecake.png'.'item1-s'); return false;">
+						<button id="item4-s">mini<span>₱150.00</span></button> 
+					</div>
+
+					<div onclick="addtocart('strawberry cheesecake (Big)','₱220.00','strawberry cheesecake.png','item1-m'); return false;">
+						<button id="item4-m">Big<span>₱220.00</span></button>
+					</div>
+				</div>
+			</div>
+
+			<!-- add more menu items here with the same structure -->
+		</div>
+
+
+		<div class="container menu-section">
+			<!--product 1 -->
+			<div class="menu-box">
+				<div class="menu-img">
+					<img src="fruit tart.png" height="180px" width="20" alt="fruit tart">
+				</div>
+				<div class="menu-content">
+					<h3>fruit tart</h3>
+					<p> Delight in the vibrant allure of a fruit tart, where a crisp, buttery crust cradles a luscious layer of creamy filling, adorned with an artistic arrangement of succulent, sun-kissed fruits that burst with flavor and color, creating a refreshing masterpiece that’s as beautiful as it is delicious.
+</p>
+					<div onclick="addtocart('fruit tart(mini)','₱115.00','fruit tart.png'.'item1-s'); return false;">
+						<button id="item5-s">mini<span>₱115.00</span></button> 
+					</div>
+
+					<div onclick="addtocart('fruit tart (Big)','₱175.00','fruit tart.png','item1-m'); return false;">
+						<button id="item5-m">Big<span>₱175.00</span></button>
+					</div>
+				</div>
+			</div>
+
+			<!-- Product 2 -->
+			<div class="menu-box">
+				<div class="menu-img">
+					<img src="Apple rose tart.png" height="180px" width="20"  alt="Apple rose tart">
+				</div>
+				<div class="menu-content">
+					<h3>Apple rose tart</h3>
+					<p>  Indulge in mini apple rose pies, where thinly sliced apples are arranged like blooming roses in a flaky crust, offering a delightful blend of buttery sweetness and warm cinnamon—perfect for impressing guests.</p>
+					<div onclick="addtocart('Apple rose tart(Mini)','₱175.00','Apple rose tart.png'.'item1-s'); return false;">
+						<button id="item6-s">Mini<span>₱175.00</span></button> 
+					</div>
+
+					<div onclick="addtocart('Apple rose tart (Big)','₱290.00','Apple rose tart.png','item1-m'); return false;">
+						<button id="item6-m">Big<span>₱290.00</span></button>
+					</div>
+				</div>
+			</div>
+
+			<!-- Product 3 -->
+			<div class="menu-box">
+				<div class="menu-img">
+					<img src="macaron.png" height="180px" width="20" alt="Macaron">
+				</div>
+				<div class="menu-content">
+					<h3>Macaron</h3>
+					<p>  Macarons are elegant French treats with delicate almond shells and luscious fillings, offering a delightful blend of crisp and chewy textures. Their vibrant colors and diverse flavors make them a luxurious and captivating dessert for any occasion.</p>
+					<div onclick="addtocart('Macaron(mini)','₱75.00','macaron.png'.'item1-s'); return false;">
+						<button id="item7-s">Mini<span>₱75.00</span></button> 
+					</div>
+
+					<div onclick="addtocart('Macaron (Big)','₱110.00','macaron.png','item1-m'); return false;">
+						<button id="item7-m">Big<span>₱110.00</span></button>
+					</div>
+				</div>
+			</div>
+
+            
+			<!-- product 4 -->
+			<div class="menu-box">
+				<div class="menu-img">
+					<img src="panzorotti.png"  height="180px" width="20" alt="Panzorotti">
+				</div>
+				<div class="menu-content">
+					<h3>Panzorotti</h3>
+					<p>A panzerotto is a golden, crispy Italian turnover filled with oozing mozzarella and rich tomato sauce, offering a delightful contrast of textures that evokes the warmth of Italian home cooking</p>
+					<div onclick="addtocart('Panzorotti(mini)','₱95.00','panzorotti.png'.'item1-s'); return false;">
+						<button id="item8-s">Mini<span>₱95.00</span></button> 
+					</div>
+
+					<div onclick="addtocart('Panzorotti (Big)','₱150.00','panzorotti.png','item1-m'); return false;">
+						<button id="item8-m">Big<span>₱150.00</span></button>
+					</div>
+				</div>
+			</div>
+			     <!--add more menu item here with the same structure -->
+		 </div>
+
+		 <div class="category-text"><h3> Drinks </h3> </div>
+
+		 <div class="container menu-section">
+		 	<!-- product 1  -->
+		 	<div class="menu-box">
+		 		<div class="menu-img">
+		 			<img src="capuccino_frap.png" height="200" width="40" alt="Cappucino Frappe">
+		 		</div>
+		 		<div class="menu-content">
+		 			<h3> Cappucino Frappe</h3>
+		 			<p>  Indulge in the creamy delight of a cappuccino frappe, where rich espresso meets velvety froth and icy goodness, topped with a dusting of cocoa and a swirl of whipped cream, creating a blissful escape in every sip. </p>
+		 		<div onclick="addtocart('Cappucino Frappe(small)','₱100.00','capuccino_frap.png'.'item1-s'); return false;">
+						<button id="item9-s">small<span>₱100.00</span></button> <!-- SMALL -->
+					</div>
+
+					<div onclick="addtocart('Cappucino Frappe (Medium)','₱150.00','capuccino_frap.png','item1-m'); return false;">
+						<button id="item9-m">Medium<span>₱150.00</span></button><!-- MEDIUM -->
+					</div>
+
+					<div onclick="addtocart('Cappucino Frappe (Large)','₱220.00','capuccino_frap.png','item1-1'); return false;">
+						<button id="item9-1">Large<span>₱220.00</span></button> <!-- LARGE -->
+					</div>
+				</div>
+			</div>
+
+			<!-- product 2 -->
+			<div class="menu-box">
+				<div class="menu-img">
+					<img src="blizzful_chocolate.png" height="200" width="40" alt="blizzful chocolate">
+				</div>
+				<div class="menu-content">
+					<h3>blizzful chocolate</h3>
+					<p> Indulge in the rich, velvety bliss of a chocolate frappe, where creamy chocolate ice cream meets frosty coffee perfection, topped with a swirl of whipped cream and a drizzle of luscious chocolate syrup—every sip is a decadent escape into sweet paradise.</p>
+					<div onclick="addtocart('blizzful chocolate(small)','₱140.00','blizzful_chocolate.png'.'item1-s'); return false;">
+						<button id="item10-s">small<span>₱140.00</span></button> <!-- SMALL -->
+					</div>
+
+					<div onclick="addtocart('blizzful chocolate (Medium)','₱190.00','blizzful_chocolate.png','item1-m'); return false;">
+						<button id="item10-m">Medium<span>₱190.00</span></button><!-- MEDIUM -->
+					</div>
+
+					<div onclick="addtocart('blizzful chocolate (Large)','₱250.00','blizzful_chocolate.png','item1-1'); return false;">
+						<button id="item10-1">Large<span>₱250.00</span></button> <!-- LARGE -->
+					</div>
+				</div>
+			</div>
+
+			<!-- product 3 -->
+			<div class="menu-box">
+				<div class="menu-img">
+					<img src="berrytastic.png" height="200" width="40"  alt="berrytastic">
+				</div>
+				<div class="menu-content">
+					<h3>berrytastic</h3>
+					<p> Experience a refreshing burst of summer with our strawberry frappe, a dreamy blend of ripe, juicy strawberries and creamy ice, crowned with a cloud of whipped cream and a sprinkle of strawberry drizzle—each sip is like a delightful stroll through a sun-kissed berry patch.</p>
+					<div onclick="addtocart('berrytastic(small)','₱110.00','berrytastic.png'.'item1-s'); return false;">
+						<button id="item11-s">small<span>₱110.00</span></button> <!-- SMALL -->
+					</div>
+
+					<div onclick="addtocart('berrytastic (Medium)','₱180.00','berrytastic.png','item1-m'); return false;">
+						<button id="item11-m">Medium<span>₱180.00</span></button><!-- MEDIUM -->
+					</div>
+
+					<div onclick="addtocart('berrytastic (Large)','₱230.00','berrytastic.png','item1-1'); return false;">
+						<button id="item11-1">Large<span>₱230.00</span></button> <!-- LARGE -->
+					</div>
+				</div>
+			</div>
+
+			<!-- product 4 -->
+			<div class="menu-box">
+				<div class="menu-img">
+					<img src="matchalicious.png" height="200" width="40" alt="Matchalicious">
+				</div>
+				<div class="menu-content">
+				<h3> Matchalicious </h3>
+				<p>  Awaken your senses with our green tea frappe, a luscious fusion of premium matcha and creamy ice, elegantly topped with a dollop of whipped cream and a hint of honey—each sip is a refreshing journey to tranquility, where vibrant flavor meets serene indulgence. </p>
+				<div onclick="addtocart('Matchalicious(small)','₱130.00','matchalicious.png'.'item1-s'); return false;">
+						<button id="item12-s">small<span>₱130.00</span></button> <!-- SMALL -->
+					</div>
+
+					<div onclick="addtocart('Matchalicious(Medium)','₱190.00','matchalicious.png','item1-m'); return false;">
+						<button id="item12-m">Medium<span>₱190.00</span></button><!-- MEDIUM -->
+					</div>
+
+					<div onclick="addtocart('Matchalicious (Large)','₱250.00','matchalicious.png','item1-1'); return false;">
+						<button id="item12-1">Large<span>₱250.00</span></button> <!-- LARGE -->
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<!-- Menu section end -->
+
+		<!-- footer start -->
+		<section class="footer">
+
+			<div class="container">
+				<div class="footer-box">
+					<h3>Location</h3>
+					<div class="footer-loc">
+						<a href="https://www.google.com/maps/place/TUP+-+College+of+Industrial+technoology/@14.5873937,120.9848474,17z/data=!3m14b1!4m6!3m5!1s0x3397cb93cd451574:0x6247d293ffefede0!8m2!3d14.5873937!4d120.9848474!16s%2fg%2f11hfq216nk?h1=en&entry=ttu" target=_blank>College of Industrial Technology,660, TUP,Ermita,Manila,1000</a>
+					</div>
+				</div>
+
+				<div class="footer-box">
+					<h3>Newsletter</h3>
+					<p> stay updated with our latest </p>
+					<form>
+						<input type="email" name="email" placeholder="name@gmail.com">
+						<button type="submit"><i class="fa-solid fa-right-long"></i></button>
+					</form>
+				</div>
+
+				<div class="footer-box">
+					<h3> Contact Us </h3>
+					<p> connect with us on:</p>
+					<div class="icons">
+						<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+						<a href="#"><i class="fa-brands fa-instagram"></i> </a>
+						<a  href="#"><i class="fa-brands fa-twitter"></i></a>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- footer end -->
+		
+	</body>
+	</html>
